@@ -1,0 +1,384 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "dbf41c47-ec81-45cf-a115-f4c61a214abc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "DAY 3\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"DAY 3\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "776503d2-47ad-4cd8-a0ce-3d4580eda9fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "PYTHON_FULLSTACK_PROJECT\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"PYTHON_FULLSTACK_PROJECT\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "e2c8e99e-982d-49ec-8d66-1656863749c0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Defaulting to user installation because normal site-packages is not writeable\n",
+      "Collecting supabase\n",
+      "  Downloading supabase-2.19.0-py3-none-any.whl.metadata (4.5 kB)\n",
+      "Collecting realtime (from supabase)\n",
+      "  Downloading realtime-2.19.0-py3-none-any.whl.metadata (6.9 kB)\n",
+      "Collecting supabase-functions (from supabase)\n",
+      "  Downloading supabase_functions-2.19.0-py3-none-any.whl.metadata (2.2 kB)\n",
+      "Collecting storage3 (from supabase)\n",
+      "  Downloading storage3-2.19.0-py3-none-any.whl.metadata (2.0 kB)\n",
+      "Collecting supabase-auth (from supabase)\n",
+      "  Downloading supabase_auth-2.19.0-py3-none-any.whl.metadata (6.3 kB)\n",
+      "Collecting postgrest (from supabase)\n",
+      "  Downloading postgrest-2.19.0-py3-none-any.whl.metadata (3.3 kB)\n",
+      "Requirement already satisfied: httpx<0.29,>=0.26 in c:\\programdata\\anaconda3\\lib\\site-packages (from supabase) (0.28.1)\n",
+      "Requirement already satisfied: anyio in c:\\programdata\\anaconda3\\lib\\site-packages (from httpx<0.29,>=0.26->supabase) (4.7.0)\n",
+      "Requirement already satisfied: certifi in c:\\programdata\\anaconda3\\lib\\site-packages (from httpx<0.29,>=0.26->supabase) (2025.8.3)\n",
+      "Requirement already satisfied: httpcore==1.* in c:\\programdata\\anaconda3\\lib\\site-packages (from httpx<0.29,>=0.26->supabase) (1.0.9)\n",
+      "Requirement already satisfied: idna in c:\\programdata\\anaconda3\\lib\\site-packages (from httpx<0.29,>=0.26->supabase) (3.7)\n",
+      "Requirement already satisfied: h11>=0.16 in c:\\programdata\\anaconda3\\lib\\site-packages (from httpcore==1.*->httpx<0.29,>=0.26->supabase) (0.16.0)\n",
+      "Requirement already satisfied: sniffio>=1.1 in c:\\programdata\\anaconda3\\lib\\site-packages (from anyio->httpx<0.29,>=0.26->supabase) (1.3.0)\n",
+      "Collecting deprecation>=2.1.0 (from postgrest->supabase)\n",
+      "  Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)\n",
+      "Requirement already satisfied: pydantic<3.0,>=1.9 in c:\\programdata\\anaconda3\\lib\\site-packages (from postgrest->supabase) (2.10.3)\n",
+      "Collecting h2<5,>=3 (from httpx[http2]<0.29,>=0.26->postgrest->supabase)\n",
+      "  Downloading h2-4.3.0-py3-none-any.whl.metadata (5.1 kB)\n",
+      "Collecting hyperframe<7,>=6.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->postgrest->supabase)\n",
+      "  Downloading hyperframe-6.1.0-py3-none-any.whl.metadata (4.3 kB)\n",
+      "Collecting hpack<5,>=4.1 (from h2<5,>=3->httpx[http2]<0.29,>=0.26->postgrest->supabase)\n",
+      "  Downloading hpack-4.1.0-py3-none-any.whl.metadata (4.6 kB)\n",
+      "Requirement already satisfied: annotated-types>=0.6.0 in c:\\programdata\\anaconda3\\lib\\site-packages (from pydantic<3.0,>=1.9->postgrest->supabase) (0.6.0)\n",
+      "Requirement already satisfied: pydantic-core==2.27.1 in c:\\programdata\\anaconda3\\lib\\site-packages (from pydantic<3.0,>=1.9->postgrest->supabase) (2.27.1)\n",
+      "Requirement already satisfied: typing-extensions>=4.12.2 in c:\\programdata\\anaconda3\\lib\\site-packages (from pydantic<3.0,>=1.9->postgrest->supabase) (4.12.2)\n",
+      "Requirement already satisfied: packaging in c:\\programdata\\anaconda3\\lib\\site-packages (from deprecation>=2.1.0->postgrest->supabase) (24.2)\n",
+      "Collecting pydantic<3.0,>=1.9 (from postgrest->supabase)\n",
+      "  Downloading pydantic-2.11.9-py3-none-any.whl.metadata (68 kB)\n",
+      "Collecting typing-extensions>=4.12.2 (from pydantic<3.0,>=1.9->postgrest->supabase)\n",
+      "  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)\n",
+      "Collecting websockets<16,>=11 (from realtime->supabase)\n",
+      "  Downloading websockets-15.0.1-cp313-cp313-win_amd64.whl.metadata (7.0 kB)\n",
+      "Collecting pydantic-core==2.33.2 (from pydantic<3.0,>=1.9->postgrest->supabase)\n",
+      "  Downloading pydantic_core-2.33.2-cp313-cp313-win_amd64.whl.metadata (6.9 kB)\n",
+      "Collecting typing-inspection>=0.4.0 (from pydantic<3.0,>=1.9->postgrest->supabase)\n",
+      "  Downloading typing_inspection-0.4.1-py3-none-any.whl.metadata (2.6 kB)\n",
+      "Requirement already satisfied: pyjwt>=2.10.1 in c:\\programdata\\anaconda3\\lib\\site-packages (from pyjwt[crypto]>=2.10.1->supabase-auth->supabase) (2.10.1)\n",
+      "Requirement already satisfied: cryptography>=3.4.0 in c:\\programdata\\anaconda3\\lib\\site-packages (from pyjwt[crypto]>=2.10.1->supabase-auth->supabase) (44.0.1)\n",
+      "Requirement already satisfied: cffi>=1.12 in c:\\programdata\\anaconda3\\lib\\site-packages (from cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->supabase-auth->supabase) (1.17.1)\n",
+      "Requirement already satisfied: pycparser in c:\\programdata\\anaconda3\\lib\\site-packages (from cffi>=1.12->cryptography>=3.4.0->pyjwt[crypto]>=2.10.1->supabase-auth->supabase) (2.21)\n",
+      "Collecting strenum>=0.4.15 (from supabase-functions->supabase)\n",
+      "  Downloading StrEnum-0.4.15-py3-none-any.whl.metadata (5.3 kB)\n",
+      "Downloading supabase-2.19.0-py3-none-any.whl (16 kB)\n",
+      "Downloading postgrest-2.19.0-py3-none-any.whl (21 kB)\n",
+      "Downloading h2-4.3.0-py3-none-any.whl (61 kB)\n",
+      "Downloading hpack-4.1.0-py3-none-any.whl (34 kB)\n",
+      "Downloading hyperframe-6.1.0-py3-none-any.whl (13 kB)\n",
+      "Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)\n",
+      "Downloading realtime-2.19.0-py3-none-any.whl (21 kB)\n",
+      "Downloading pydantic-2.11.9-py3-none-any.whl (444 kB)\n",
+      "Downloading pydantic_core-2.33.2-cp313-cp313-win_amd64.whl (2.0 MB)\n",
+      "   ---------------------------------------- 0.0/2.0 MB ? eta -:--:--\n",
+      "   ---------------------------------------- 2.0/2.0 MB 87.3 MB/s eta 0:00:00\n",
+      "Downloading websockets-15.0.1-cp313-cp313-win_amd64.whl (176 kB)\n",
+      "Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)\n",
+      "Downloading typing_inspection-0.4.1-py3-none-any.whl (14 kB)\n",
+      "Downloading storage3-2.19.0-py3-none-any.whl (18 kB)\n",
+      "Downloading supabase_auth-2.19.0-py3-none-any.whl (43 kB)\n",
+      "Downloading supabase_functions-2.19.0-py3-none-any.whl (8.3 kB)\n",
+      "Downloading StrEnum-0.4.15-py3-none-any.whl (8.9 kB)\n",
+      "Installing collected packages: strenum, websockets, typing-extensions, hyperframe, hpack, deprecation, typing-inspection, pydantic-core, h2, pydantic, supabase-functions, supabase-auth, storage3, realtime, postgrest, supabase\n",
+      "\n",
+      "   -- -------------------------------------  1/16 [websockets]\n",
+      "   -- -------------------------------------  1/16 [websockets]\n",
+      "   -- -------------------------------------  1/16 [websockets]\n",
+      "   -- -------------------------------------  1/16 [websockets]\n",
+      "   ----- ----------------------------------  2/16 [typing-extensions]\n",
+      "   ---------- -----------------------------  4/16 [hpack]\n",
+      "   ------------ ---------------------------  5/16 [deprecation]\n",
+      "   ----------------- ----------------------  7/16 [pydantic-core]\n",
+      "   -------------------- -------------------  8/16 [h2]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   ---------------------- -----------------  9/16 [pydantic]\n",
+      "   --------------------------- ------------ 11/16 [supabase-auth]\n",
+      "   ------------------------------ --------- 12/16 [storage3]\n",
+      "   -------------------------------- ------- 13/16 [realtime]\n",
+      "   ----------------------------------- ---- 14/16 [postgrest]\n",
+      "   ---------------------------------------- 16/16 [supabase]\n",
+      "\n",
+      "Successfully installed deprecation-2.1.0 h2-4.3.0 hpack-4.1.0 hyperframe-6.1.0 postgrest-2.19.0 pydantic-2.11.9 pydantic-core-2.33.2 realtime-2.19.0 storage3-2.19.0 strenum-0.4.15 supabase-2.19.0 supabase-auth-2.19.0 supabase-functions-2.19.0 typing-extensions-4.15.0 typing-inspection-0.4.1 websockets-15.0.1\n",
+      "Note: you may need to restart the kernel to use updated packages.\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "  WARNING: The script websockets.exe is installed in 'C:\\Users\\acc48\\AppData\\Roaming\\Python\\Python313\\Scripts' which is not on PATH.\n",
+      "  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.\n"
+     ]
+    }
+   ],
+   "source": [
+    "pip install supabase"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "8361c395-c13f-4119-8bb2-8a6f74223383",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "APIResponse[TypeVar](data=[{'id': 4, 'name': 'gagan teja', 'age': 18, 'attendance': 70}], count=None)"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from supabase import create_client, Client\n",
+    "\n",
+    "url = \"https://fzpmhathconspucgjqgy.supabase.co\"\n",
+    "key = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6cG1oYXRoY29uc3B1Y2dqcWd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNTYwNjgsImV4cCI6MjA3MzgzMjA2OH0.-N0wIYKSCM5UzDycQdwqBIS_ODggkKOEZl00aw2YGJM\"\n",
+    "supabase: Client = create_client(url, key)\n",
+    "\n",
+    "# Insert test data\n",
+    "supabase.table(\"students\").insert({\n",
+    "    \"name\": \"gagan teja\",\n",
+    "    \"age\": 18,\n",
+    "    \"attendance\": 70\n",
+    "}).execute()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "49e08893-38ec-4448-bd6c-eff9501f0c3b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.19.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "import supabase\n",
+    "\"\"print(supabase.__version__)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "44e577f6-78b1-43a9-ba7e-cec6d6c86eae",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "AttributeError",
+     "evalue": "module 'supabase' has no attribute 'table'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[27], line 2\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;66;03m# All students\u001b[39;00m\n\u001b[1;32m----> 2\u001b[0m res \u001b[38;5;241m=\u001b[39m supabase\u001b[38;5;241m.\u001b[39mtable(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mstudents\u001b[39m\u001b[38;5;124m\"\u001b[39m)\u001b[38;5;241m.\u001b[39mselect(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124m*\u001b[39m\u001b[38;5;124m\"\u001b[39m)\u001b[38;5;241m.\u001b[39mexecute()\n\u001b[0;32m      3\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mAll Students:\u001b[39m\u001b[38;5;124m\"\u001b[39m, res\u001b[38;5;241m.\u001b[39mdata)\n\u001b[0;32m      5\u001b[0m \u001b[38;5;66;03m# Only eligible students (attendance >= 75)\u001b[39;00m\n",
+      "\u001b[1;31mAttributeError\u001b[0m: module 'supabase' has no attribute 'table'"
+     ]
+    }
+   ],
+   "source": [
+    "# All students\n",
+    "res = supabase.table(\"students\").select(\"*\").execute()\n",
+    "print(\"All Students:\", res.data)\n",
+    "\n",
+    "# Only eligible students (attendance >= 75)\n",
+    "eligible = supabase.table(\"students\").select(\"*\").gte(\"attendance\", 75).execute()\n",
+    "print(\"Eligible Students:\", eligible.data)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "384ab5ad-8a42-458a-8b5b-349b30978e36",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "APIResponse[TypeVar](data=[{'id': 4, 'name': 'gagan teja', 'age': 18, 'attendance': 70}], count=None)"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Delete students with < 75% attendance\n",
+    "supabase.table(\"students\").delete().lt(\"attendance\", 75).execute()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "b4e98891-713e-4063-a7b8-9747bceb12b3",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "APIResponse[TypeVar](data=[], count=None)"
+      ]
+     },
+     "execution_count": 33,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Update Alice's attendance\n",
+    "supabase.table(\"students\").update({\"attendance\": 80}).eq(\"name\",\"Alice\").execute()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "669df513-cdc7-4235-a25e-8cc1f50adb71",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "HEY SALAAR\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"HEY SALAAR\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "ad8ed314-39e2-4c14-a560-38263774b73e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Writing student_manager.py\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%writefile student_manager.py\n",
+    "import streamlit as st\n",
+    "from supabase import create_client\n",
+    "import pandas as pd\n",
+    "\n",
+    "url = \"  https://fzpmhathconspucgjqgy.supabase.co\"\n",
+    "key = \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ6cG1oYXRoY29uc3B1Y2dqcWd5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyNTYwNjgsImV4cCI6MjA3MzgzMjA2OH0.-N0wIYKSCM5UzDycQdwqBIS_ODggkKOEZl00aw2YGJM\"\n",
+    "supabase = create_client(url, key)\n",
+    "\n",
+    "st.set_page_config(page_title=\"Student Manager\", page_icon=\"🎓\", layout=\"centered\")\n",
+    "\n",
+    "st.title(\"🎓 Student Manager with Supabase\")\n",
+    "st.write(\"Add students, check attendance & eligibility\")\n",
+    "with st.form(\"student_form\"):\n",
+    "    name = st.text_input(\"Name\")\n",
+    "    age = st.number_input(\"Age\", min_value=1, max_value=100, step=1)\n",
+    "    attendance = st.number_input(\"Attendance (%)\", min_value=0.0, max_value=100.0, step=0.5)\n",
+    "    submitted = st.form_submit_button(\"➕ Add Student\")\n",
+    "    \n",
+    "    if submitted and name:\n",
+    "        supabase.table(\"students\").insert({\"name\": name, \"age\": age, \"attendance\": attendance}).execute()\n",
+    "        st.success(f\"✅ {name} added successfully!\")\n",
+    "\n",
+    "st.subheader(\"📋 Student List\")\n",
+    "res = supabase.table(\"students\").select(\"*\").execute()\n",
+    "data = res.data\n",
+    "\n",
+    "if data:\n",
+    "    df = pd.DataFrame(data)\n",
+    "    df[\"Eligibility\"] = df[\"attendance\"].apply(lambda x: \"✅ Eligible\" if x >= 75 else \"❌ Not Eligible\")\n",
+    "    st.dataframe(df, use_container_width=True)\n",
+    "else:\n",
+    "    st.info(\"No students found. Add some!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9791fecf-332c-4b9d-af7f-12fab89397bd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!streamlit run student_manager.py"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
